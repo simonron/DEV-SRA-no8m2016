@@ -1,10 +1,15 @@
 function sra_menu(go_here) {
+	var p = $( "section#Associates" );
+var offsetP = p.offset();
+p.html( "left: " + offsetP.left + ", top: " + offsetP.top );
+console.log(offsetP.left+"ihkgkbgl"+offsetP.top+"ihkgkbgl")	
 	var displayed_content = "";
 	var move_here = 0;
 	var offset = 0;
 	//var offset_left = 0;
 	//alert(go_here);
-	display_here_obj = "#" + (document.getElementById("top-of-site").id);
+/*	display_here_obj = "#" + (document.getElementById("top-of-site").id);*/
+	
 	display_here_px = $(display_here_obj).offset();
 	console.log("display_here_px = " + display_here_px);
 	display_here_top = display_here_px.top;
@@ -36,8 +41,8 @@ function sra_menu(go_here) {
 /*	console.log("offset.top = " + offset.top);
 	console.log("offset.left = " + offset.left);
 	console.log("offset.width = " + offset.width);*/
-/*	move_here_x = (offset.left);*/
-		move_here_x = 10;
+	move_here_x = (offset.left);
+		//move_here_x = 10;
 	move_here_y = (displayed_content_top - display_here_top);
 
 	//alert($( this ).css( "transform" ));
