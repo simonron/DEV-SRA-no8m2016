@@ -1,13 +1,8 @@
 function sra_menu(go_here) {
-	var p = $("section#Associates");
-	var offsetP = p.offset();
-	//p.html( "left: " + offsetP.left + ", top: " + offsetP.top );
-	//console.log(offsetP.left+"ihkgkbgl"+offsetP.top+"ihkgkbgl")	
 	var displayed_content = "";
-	var move_here = 0;
+	//last_content="start";
+
 	var offset = 0;
-	//var offset_left = 0;
-	//alert(go_here);
 	display_here_obj = "#" + (document.getElementById("top-of-site").id);
 
 	display_here_px = $(display_here_obj).offset();
@@ -20,60 +15,66 @@ function sra_menu(go_here) {
 	displayed_content_left = displayed_content_offset.left;
 	displayed_content_width = $(displayed_content).width();
 
-	console.log("displayed_content_top = " + displayed_content_top);
-	console.log("displayed_content_left = " + displayed_content_left);
-	console.log("displayed_content_width = " + displayed_content_width);
-
 	offset_left_obj = "#" + (document.getElementById("top_area").id);
 	offset_left_px = $(offset_left_obj).offset();
-	console.log("offset_left_px_left = " + offset_left_px.left);
-	console.log("offset_left_px_top = " + offset_left_px.top);
-	offset_left = offset_left_px.top;
-	console.log("offset_left = " + offset_left);
-	//alert(place);
 
-	//alert(offset)
-	/*
-					offset =  $(Associates).offset();
-	*/
-	console.log("displayed_content_left = " + displayed_content_left);
 	move_here_x = (offset.left);
-	/*	console.log("offset.top = " + offset.top);
-		console.log("offset.left = " + offset.left);
-		console.log("offset.width = " + offset.width);*/
 	move_here_y = (displayed_content_top - display_here_top);
-	//move_here_y = displayed_content_top;
-	console.log("displayed_content_top = " + displayed_content_top);
-	console.log("display_here_top = " + display_here_top);
-	console.log("move_here_y = " + move_here_y);
+	
+/*	if(last_content){
+			console.log("last_content = "+ last_content) ;
+	};*/
+	console.log("displayed_content = " + displayed_content);
+ 
+	if ( typeof last_content != 'undefined')	{		console.log("last_content = "+ last_content) ;											
 
-	//alert($( this ).css( "transform" ));
+	if (displayed_content != last_content) {
+console.log("before last_content = "+ last_content) ;
+		$(last_content).css("transform", "none");
+	//	$(last_content).css("position", "relative");
+	//	$(last_content).css("transform", "translate(auto auto )");
+
+		console.log("RESETTING");
+		last_content=displayed_content;
+				console.log(" after last_content = "+ last_content) ;	
+	}
+														 	}
 
 	if ($(displayed_content).css("transform") == 'none') {
-		//$(this).css("transform","rotate(45deg)");
-		console.log("displayed_content=" + displayed_content);
-		//$(displayed_content).css("transform","translate(0px,-"+move_here+"px)");
-		//$(displayed_content).css("transform","translate(0px,100px)");
+				$(displayed_content).css("transform", "translate(0px,-" + move_here_y + "px)");
+		$(displayed_content).css("border-bottom", "solid 100vh rgba(0,0,0,0.5)");
+				$(displayed_content).css("border-left", "solid 10vw rgba(0,0,0,0.5)");
+				$(displayed_content).css("border-right", "solid 10vw rgba(0,0,0,0.5)");
+						$(displayed_content).css("border-top", "solid 10vh rgba(0,0,0,0.5)");
+			$(wrapper).css("overflow-y", "scroll");
 
-		/*	console.log(displayed_content);
-			console.log(move_here_x + "=move_here_x px");*/
-		console.log(move_here_y + "= move_here_y px");
-		$(displayed_content).css("transform", "translate(0px,-" + move_here_y + "px)");
+		$("body").css("overflow-y", "hidden");
 
-		/*$(displayed_content).css("position", "absolute");
-		$(displayed_content).css("z-index", "100");
-		$(displayed_content).css("margin", "0 auto");*/
 
-		//$(displayed_content).css("transform", "translate(0px,-179px)");
+				//$(displayed_content).fadeIn();
+			//
+/*		var elements =  $('.container :not('+displayed_content+' .container)');
+			$(elements).fadeOut();
+		console.log(elements);
+		$(displayed_content).fadeIn();*/
+	
+
+	
+	
+	
 	} else {
 		$(displayed_content).css("transform", "none");
-		$(displayed_content).css("position", "relative");
-		$(displayed_content).css("transform", "translate(auto auto )");
+		//$(displayed_content).css("position", "relative");
+				$(displayed_content).css("border", "solid 0px");
+		$("body").css("overflow-y", "scroll");
+		$(wrapper).css("overflow-y", "auto");
+
+
+/*		$(displayed_content).css("transform", "translate(auto auto )");*/
 		console.log("reset?");
 	}
-
+	last_content = displayed_content;	
 }
-
 var open = false;
 
 function onClickMenu() {

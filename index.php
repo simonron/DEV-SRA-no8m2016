@@ -205,7 +205,7 @@ else
 						</div>
 						<div class='main_menu span6'>
 						<!--	<jdoc:include type="modules" name="main_menu" style="none" />-->
-							<span onclick="sra_menu('Home')">Home</span> <span onclick="sra_menu('clients')">Clients</span> <span onclick="sra_menu('Expertise')">Expertise</span> <span onclick="sra_menu('Associates')"> Associates</span><span onclick="sra_menu('Contact')"> Contact</span><span onclick="sra_menu('twitter')"> Twitter</span>
+							<span onclick="location.reload()">Home</span> <span onclick="sra_menu('clients')">Clients</span> <span onclick="sra_menu('Expertise')">Expertise</span> <span onclick="sra_menu('Associates')"> Associates</span><span onclick="sra_menu('Contact')"> Contact</span><span onclick="sra_menu('twitter')"> Twitter</span>
 					<!--		<button onclick="sra_menu('Home')"></button>
 							<button onclick="sra_menu('clients')"></button>
 							<button onclick="sra_menu('Expertise')"></button>
@@ -220,10 +220,7 @@ else
 
 
 
-
-
-
-<section class="menutest">
+<section>
 			<div class="home" id="Home">
 				<div class='container'>
 					<div class='row-fluid'>
@@ -238,7 +235,7 @@ else
 				</div>
 			</div>
 </section>
-			<section menutest>
+			<section >
 			<div id="FlexibleAndCreative" class="tiled">
 				<div class="container">
 					<div class="mask">
@@ -248,7 +245,7 @@ else
 			</div>
 </section>
 
-<section menutest>
+<section >
 			<div class="expertise" id="Expertise">
 				<div class='container'>
 					<div class='row-fluid'>
@@ -264,7 +261,7 @@ else
 				</div>
 			</div>
 </section>
-			<section menutest>
+			<section >
 
 			<div class="clients" id="clients">
 				<div class='container'>

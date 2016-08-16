@@ -4,7 +4,8 @@
 	$lightGrey:#f0f0f0;
 	body {
 		background: $lightGrey;
-		overflow-x: hidden;
+		overflow: hidden;
+		overflow-y: scroll;
 	}
 	body.site {
 		font-family: 'Merriweather', serif;
@@ -85,6 +86,13 @@
 				padding: 30px 1.2vw 20px 1.2vw;
 				margin: 0 auto;
 			}
+		}
+		span{
+				display: block;
+				float: left;
+				padding: 30px 1vw 20px 1vw;
+				margin: 0 auto;
+
 		}
 	}
 	.home .row-fluid .span6 {

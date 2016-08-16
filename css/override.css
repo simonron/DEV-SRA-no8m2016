@@ -1,6 +1,7 @@
 body {
   background: #f0f0f0;
-  overflow-x: hidden; }
+  overflow: hidden;
+  overflow-y: scroll; }
 
 body.site {
   font-family: 'Merriweather', serif;
@@ -74,6 +75,11 @@ div.main_menu {
     display: block;
     float: left;
     padding: 30px 1.2vw 20px 1.2vw;
+    margin: 0 auto; }
+  div.main_menu span {
+    display: block;
+    float: left;
+    padding: 30px 1vw 20px 1vw;
     margin: 0 auto; }
 
 .home .row-fluid .span6 {
