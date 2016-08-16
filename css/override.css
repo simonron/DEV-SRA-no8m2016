@@ -22,9 +22,13 @@ section {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden; }
+  position: relative; }
 
-Associates {
+#Associates,
+#clients,
+#Expertise,
+#twitter,
+#Contact {
   -webkit-transition-duration: 1s;
   -moz-transition-duration: 1s;
   -o-transition-duration: 1s;

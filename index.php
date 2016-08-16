@@ -204,14 +204,14 @@ else
 							<jdoc:include type="modules" name="no8m_logo" style="none" />
 						</div>
 						<div class='main_menu span6'>
-							<jdoc:include type="modules" name="main_menu" style="none" />
-							<button onclick="sra_menu('Home')"></button>
+						<!--	<jdoc:include type="modules" name="main_menu" style="none" />-->
+							<span onclick="sra_menu('Home')">Home</span> <span onclick="sra_menu('clients')">Clients</span> <span onclick="sra_menu('Expertise')">Expertise</span> <span onclick="sra_menu('Associates')"> Associates</span><span onclick="sra_menu('Contact')"> Contact</span><span onclick="sra_menu('twitter')"> Twitter</span>
+					<!--		<button onclick="sra_menu('Home')"></button>
 							<button onclick="sra_menu('clients')"></button>
 							<button onclick="sra_menu('Expertise')"></button>
 							<button onclick="sra_menu('Associates')"></button>
 							<button onclick="sra_menu('Contact')"></button>
-							<button onclick="sra_menu('twitter')"></button>
-							<p>Hello</p><p>2nd Paragraph</p>
+							<button onclick="sra_menu('twitter')"></button>-->
 						</div>
 					</div>
 				</div>
